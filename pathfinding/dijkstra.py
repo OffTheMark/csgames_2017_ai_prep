@@ -7,7 +7,7 @@ class DijkstraSolver(Solver):
         finish = self.find(self.FINISH)
 
         visited = set()
-        distances = dict.fromkeys(self.maze_graph.keys(), float("inf"))
+        distances = dict.fromkeys(self.maze_graph.keys(), float("+inf"))
         predecessors = dict.fromkeys(self.maze_graph.keys(), None)
         distances[start] = 0
 
