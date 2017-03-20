@@ -2,6 +2,10 @@ from pathfinding.solver import Solver
 
 
 class DijkstraSolver(Solver):
+    """
+    Dijkstra solver implementation \n
+    Based on https://en.wikipedia.org/wiki/Dijkstra's_algorithm#Pseudocode
+    """
     def solve(self):
         start = self.find(self.START)
         finish = self.find(self.FINISH)

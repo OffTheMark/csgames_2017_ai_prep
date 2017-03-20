@@ -4,6 +4,10 @@ from math import sqrt
 
 
 class AStarSolver(Solver):
+    """
+    A* solver implementation \n
+    Based on http://bryukh.com/labyrinth-algorithms/
+    """
     def manhattan_distance(self, cell, finish):
         return abs(cell[0] - finish[0]) + abs(cell[1] - finish[1])
 

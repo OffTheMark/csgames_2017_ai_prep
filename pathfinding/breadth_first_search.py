@@ -3,6 +3,10 @@ from collections import deque
 
 
 class BreadFirstSearchSolver(Solver):
+    """
+    BFS solver implementation \n
+    Based on http://bryukh.com/labyrinth-algorithms/
+    """
     def solve(self):
         start = self.find(self.START)
         finish = self.find(self.FINISH)

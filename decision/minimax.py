@@ -2,6 +2,10 @@ from node import Node
 
 
 def minimax(node, depth, maximize):
+    """
+    Minimax algorithm implementation \n
+    Based on https://en.wikipedia.org/wiki/Minimax#Pseudocode
+    """
     if depth == 0 or not node.has_children():
         return node.value
 
@@ -20,6 +24,10 @@ def minimax(node, depth, maximize):
 
 
 def alphabeta(node, depth, alpha, beta, maximize):
+    """
+    Alpha-beta pruning algorithm implementation \n
+    Based on https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning#Pseudocode
+    """
     if depth == 0 or not node.has_children():
         return node.value
 
