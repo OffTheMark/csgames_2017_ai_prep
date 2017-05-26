@@ -36,6 +36,19 @@ DEAD_ENDS_MAZE = (
     '#      #  F#;'
     '############'
 )
+COMPLEX_MAZE = (
+    '######################;'
+    '#   #   ## ##     #  F;'
+    '# #   #       ### # ##;'
+    '# # #  ##  ####   # ##;'
+    '### ######    ### #  #;'
+    '#          ##  ##    #;'
+    '##### ######   ##### #;'
+    '#     #   #######  # #;'
+    '# #######      S #   #;'
+    '#                # ###;'
+    '################## ###'
+)
 SNAKE_MAZE = (
     '############;'
     '#S #   #   #;'
@@ -54,16 +67,19 @@ MAZES = [
     SMALL_MAZE,
     SIMPLE_MAZE,
     DEAD_ENDS_MAZE,
+    COMPLEX_MAZE,
     SNAKE_MAZE
 ]
 MAZE_NAMES = [
     "Small maze",
     "Simple maze",
     "Dead ends maze",
+    "Complex maze",
     "Snake maze"
 ]
 ALGORITHM_NAMES = [
     "Breadth-first search",
+    "Depth-first search",
     "A*",
     "Dijkstra"
 ]
@@ -102,8 +118,12 @@ if __name__ == "__main__":
     if algorithm_choice == 0:
         solver = pathfinding.BreadFirstSearchSolver(maze_list)
     elif algorithm_choice == 1:
-        solver = pathfinding.AStarSolver(maze_list)
+        solver = pathfinding.DepthFirstSearchSolver(maze_list)
     elif algorithm_choice == 2:
+        solver = pathfinding.AStarSolver(maze_list)
+    elif algorithm_choice == 3:
+        solver = pathfinding.DijkstraSolver(maze_list)
+    elif algorithm_choice == 4:
         solver = pathfinding.DijkstraSolver(maze_list)
 
     path = solver.solve()

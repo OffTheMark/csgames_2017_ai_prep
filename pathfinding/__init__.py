@@ -1,3 +1,4 @@
 from breadth_first_search import BreadFirstSearchSolver
+from depth_first_search import DepthFirstSearchSolver
 from a_star import AStarSolver
 from dijkstra import DijkstraSolver
